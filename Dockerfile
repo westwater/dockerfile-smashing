@@ -14,7 +14,8 @@ RUN apk add --no-cache ruby-dev g++ musl-dev make \
 # Create dashboard and link volumes
 RUN smashing new smashing
 
-WORKDIR /smashing
+RUN rm -r /smashing/dashboards/* \
+    && rm -r /smashing/jobs/*
 
 RUN cd /smashing \
     && bundle \
