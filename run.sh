@@ -12,8 +12,9 @@ function install_gems() {
     for GEM in $GEMS; do
       echo -e "gem '$GEM'" >> Gemfile
     done
-    bundle install
   fi
+
+  bundle install
 }
 
 if [[ ! -e /installed ]]; then
@@ -29,5 +30,6 @@ echo "Gemfile"
 echo "----"
 cat Gemfile
 echo "----"
+
 echo "Starting smashing"
 smashing start ${PORT_ARG}
