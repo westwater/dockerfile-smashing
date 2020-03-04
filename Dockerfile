@@ -18,7 +18,6 @@ RUN rm -r /smashing/dashboards/* \
     && rm -r /smashing/jobs/*
 
 RUN cd /smashing \
-    && bundle \
     && ln -s /smashing/dashboards /dashboards \
     && ln -s /smashing/jobs /jobs \
     && ln -s /smashing/assets /assets \
